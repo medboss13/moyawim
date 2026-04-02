@@ -31,7 +31,7 @@ const CAT_ICONS: Record<string, string> = {
 export function WorkerDashboard() {
   const { user, userData } = useAuth()
   const { missions, loading: missionsLoading } = useAllMissions()
-  const { applications, loading: appsLoading } = useMyApplications()
+ const { offers: applications = [] } = useMyOffers()
   const { profile, refreshProfile } = useWorkerProfile()
   const { saveWorker } = useSaveWorkerProfile()
 

@@ -37,7 +37,7 @@ const quickActions = [
 
 export function EmployerDashboard() {
   const { user, userData } = useAuth()
-  const { missions, loading: missionsLoading } = useMyMissions()
+  const { tasks: missions = [] } = useMyTasks()
   const { workers, loading: workersLoading } = useWorkers()
 
   const name = userData?.name || user?.displayName || "Utilisateur"
