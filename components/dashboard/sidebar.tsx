@@ -159,7 +159,7 @@ export function DashboardSidebar() {
   }
 
   return (
-    <aside className="hidden md:flex w-[260px] flex-col bg-navy flex-shrink-0">
+    <aside className="hidden md:flex w-[260px] flex-col bg-navy flex-shrink-0 h-screen sticky top-0">
       {/* Brand */}
       <div className="px-5 py-5 border-b border-white/[0.07]">
         <Link href="/" className="flex items-center gap-2.5">
