@@ -13,7 +13,6 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { useAuth } from "@/lib/auth-context"
 import { useMyMissions, useWorkers } from "@/lib/firebase-hooks"
-import { useMyTasks } from "@/lib/firebase-hooks"
 
 const CAT_ICONS: Record<string, string> = {
   "BTP & Construction": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=80&h=80&fit=crop",
@@ -39,7 +38,7 @@ const quickActions = [
 export function EmployerDashboard() {
   const { user, userData } = useAuth()
   const { tasks: missions = [], loading: missionsLoading } = useMyMissions()
-  const { workers, loading: workersLoading } = useWorkers()
+  const { tasks: missions = [], loading: missionsLoading } = useMyMissions()
 
   const name = userData?.name || user?.displayName || "Utilisateur"
   const firstName = name.split(" ")[0]
