@@ -393,7 +393,7 @@ export default function SettingsPage() {
                     <AlertDialogHeader>
                       <AlertDialogTitle>Supprimer votre compte ?</AlertDialogTitle>
                       <AlertDialogDescription>
-                        Cette action est irreversible. Toutes vos donnees, taches, messages et avis seront definitivement supprimes.
+                        Cette action est irreversible. Toutes vos donnees, missions, messages et avis seront definitivement supprimes.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>

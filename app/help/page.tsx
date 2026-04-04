@@ -21,21 +21,21 @@ const helpCategories = [
     color: "#f47920",
     articles: [
       "Comment creer un compte ?",
-      "Comment publier ma premiere tache ?",
+      "Comment publier ma premiere mission ?",
       "Comment devenir travailleur ?",
       "Comment fonctionne la verification ?",
     ]
   },
   {
     id: "tasks",
-    title: "Gestion des taches",
+    title: "Gestion des missions",
     icon: Briefcase,
     color: "#0d1f3c",
     articles: [
-      "Comment publier une tache ?",
-      "Comment modifier ou supprimer une tache ?",
+      "Comment publier une mission ?",
+      "Comment modifier ou supprimer une mission ?",
       "Comment choisir le bon travailleur ?",
-      "Comment marquer une tache comme terminee ?",
+      "Comment marquer une mission comme terminee ?",
     ]
   },
   {
@@ -45,7 +45,7 @@ const helpCategories = [
     color: "#16a34a",
     articles: [
       "Comment fonctionne le paiement securise ?",
-      "Quand suis-je paye pour mes taches ?",
+      "Quand suis-je paye pour mes missions ?",
       "Quels sont les frais de la plateforme ?",
       "Comment obtenir un remboursement ?",
     ]
@@ -91,15 +91,15 @@ const helpCategories = [
 const popularQuestions = [
   {
     q: "Comment puis-je commencer a utiliser Moyawim ?",
-    a: "Creez un compte gratuitement, choisissez votre role (employeur ou travailleur), et completez votre profil. Vous pouvez ensuite publier des taches ou postuler a des missions."
+    a: "Creez un compte gratuitement, choisissez votre role (employeur ou travailleur), et completez votre profil. Vous pouvez ensuite publier des missions ou postuler."
   },
   {
     q: "Est-ce que l'inscription est gratuite ?",
-    a: "Oui, l'inscription et la publication de taches sont entierement gratuites. Nous prelevons uniquement une commission de 10% sur les transactions completees."
+    a: "Oui, l'inscription et la publication de missions sont entierement gratuites. Nous prelevons uniquement une commission de 10% sur les transactions completees."
   },
   {
     q: "Comment fonctionne le paiement securise ?",
-    a: "Lorsqu'une offre est acceptee, le paiement est place en securite (escrow). L'argent est libere au travailleur uniquement une fois que vous confirmez la bonne execution de la tache."
+    a: "Lorsqu'une offre est acceptee, le paiement est place en securite (escrow). L'argent est libere au travailleur uniquement une fois que vous confirmez la bonne execution de la mission."
   },
   {
     q: "Comment contacter un travailleur ?",

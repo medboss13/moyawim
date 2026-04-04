@@ -16,11 +16,11 @@ import { AuthModal } from "@/components/auth-modal"
 const stepsEmployer = [
   {
     num: 1,
-    title: "Decrivez votre tache",
+    title: "Decrivez votre mission",
     desc: "Expliquez ce dont vous avez besoin en quelques mots. Plus vous etes precis, meilleures seront les offres que vous recevrez.",
     details: [
       "Choisissez une categorie (menage, plomberie, jardinage...)",
-      "Decrivez la tache en detail",
+      "Decrivez la mission en detail",
       "Indiquez votre budget ou laissez les travailleurs proposer",
       "Precisez la date et le lieu",
     ],
@@ -59,7 +59,7 @@ const stepsEmployer = [
   {
     num: 4,
     title: "Payez en securite",
-    desc: "Payez uniquement quand la tache est terminee a votre satisfaction. Votre argent est protege jusqu'a validation.",
+    desc: "Payez uniquement quand la mission est terminee a votre satisfaction. Votre argent est protege jusqu'a validation.",
     details: [
       "Paiement bloque jusqu'a validation",
       "Plusieurs moyens de paiement (CB, virement, cash)",
@@ -88,11 +88,11 @@ const stepsWorker = [
   },
   {
     num: 2,
-    title: "Parcourez les taches",
-    desc: "Decouvrez les taches disponibles pres de chez vous. Filtrez par categorie, budget et localisation.",
+    title: "Parcourez les missions",
+    desc: "Decouvrez les missions disponibles pres de chez vous. Filtrez par categorie, budget et localisation.",
     details: [
-      "Taches geolocalises pres de vous",
-      "Alertes pour les nouvelles taches",
+      "Missions geolocalisees pres de vous",
+      "Alertes pour les nouvelles missions",
       "Filtres avances",
       "Voir le budget propose",
     ],
@@ -102,7 +102,7 @@ const stepsWorker = [
   {
     num: 3,
     title: "Faites des offres",
-    desc: "Proposez vos services aux employeurs. Expliquez pourquoi vous etes le meilleur choix pour leur tache.",
+    desc: "Proposez vos services aux employeurs. Expliquez pourquoi vous etes le meilleur choix pour leur mission.",
     details: [
       "Proposez votre prix",
       "Decrivez votre approche",
@@ -115,7 +115,7 @@ const stepsWorker = [
   {
     num: 4,
     title: "Gagnez de l'argent",
-    desc: "Completez les taches et recevez votre paiement rapidement. Construisez votre reputation avec les avis.",
+    desc: "Completez les missions et recevez votre paiement rapidement. Construisez votre reputation avec les avis.",
     details: [
       "Paiement rapide apres validation",
       "Virement sur votre compte",
@@ -130,7 +130,7 @@ const stepsWorker = [
 const benefits = [
   {
     title: "Gratuit pour publier",
-    desc: "Publier une tache est 100% gratuit. Vous ne payez que lorsque vous acceptez une offre.",
+    desc: "Publier une mission est 100% gratuit. Vous ne payez que lorsque vous acceptez une offre.",
     icon: Zap,
   },
   {
@@ -140,7 +140,7 @@ const benefits = [
   },
   {
     title: "Paiement securise",
-    desc: "L'argent est bloque jusqu'a ce que vous validiez la tache. Protection garantie.",
+    desc: "L'argent est bloque jusqu'a ce que vous validiez la mission. Protection garantie.",
     icon: Lock,
   },
   {
@@ -153,7 +153,7 @@ const benefits = [
 const faqs = [
   {
     q: "Comment ca coute ?",
-    a: "Publier une tache est gratuit. Moyawim prend une commission de 10% sur le montant de la tache uniquement si elle est completee avec succes. Les travailleurs recoivent 90% du prix.",
+    a: "Publier une mission est gratuit. Moyawim prend une commission de 10% sur le montant de la mission uniquement si elle est completee avec succes. Les travailleurs recoivent 90% du prix.",
   },
   {
     q: "Comment les travailleurs sont-ils verifies ?",
@@ -161,14 +161,14 @@ const faqs = [
   },
   {
     q: "Que se passe-t-il si je ne suis pas satisfait ?",
-    a: "Votre paiement est bloque jusqu'a ce que vous validiez la tache. Si vous n'etes pas satisfait, contactez notre support et nous trouverons une solution (remboursement, mediation, etc.).",
+    a: "Votre paiement est bloque jusqu'a ce que vous validiez la mission. Si vous n'etes pas satisfait, contactez notre support et nous trouverons une solution (remboursement, mediation, etc.).",
   },
   {
     q: "Comment fonctionne le paiement ?",
     a: "Vous payez en ligne lors de l'acceptation d'une offre. L'argent est garde en securite par Moyawim et transfere au travailleur uniquement apres votre validation finale.",
   },
   {
-    q: "Puis-je annuler une tache ?",
+    q: "Puis-je annuler une mission ?",
     a: "Oui, vous pouvez annuler gratuitement tant qu'aucune offre n'a ete acceptee. Apres acceptation, des frais peuvent s'appliquer selon le delai d'annulation.",
   },
   {
@@ -178,7 +178,7 @@ const faqs = [
 ]
 
 const stats = [
-  { value: "50K+", label: "Taches completees" },
+  { value: "50K+", label: "Missions completees" },
   { value: "12K+", label: "Travailleurs actifs" },
   { value: "4.8/5", label: "Note moyenne" },
   { value: "2min", label: "Temps de reponse moyen" },
@@ -210,7 +210,7 @@ export default function HowItWorksPage() {
 
         <div className="hidden md:flex items-center gap-8">
           <Link href="/browse" className="text-sm font-medium text-foreground hover:text-orange transition-colors">
-            Parcourir les taches
+            Parcourir les missions
           </Link>
           <Link href="/categories" className="text-sm font-medium text-foreground hover:text-orange transition-colors">
             Categories
@@ -246,7 +246,7 @@ export default function HowItWorksPage() {
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Que vous cherchiez a accomplir une tache ou a gagner de l&apos;argent en offrant vos services, 
+            Que vous cherchiez a accomplir une mission ou a gagner de l&apos;argent en offrant vos services, 
             Moyawim rend tout simple et transparent.
           </p>
 
@@ -476,7 +476,7 @@ export default function HowItWorksPage() {
             Pret a commencer ?
           </h2>
           <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-            Rejoignez des milliers de marocains qui utilisent Moyawim pour accomplir leurs taches ou gagner de l&apos;argent.
+            Rejoignez des milliers de marocains qui utilisent Moyawim pour accomplir leurs missions ou gagner de l&apos;argent.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -485,7 +485,7 @@ export default function HowItWorksPage() {
               onClick={() => setAuthOpen(true)}
               className="bg-orange hover:bg-orange-hover text-base px-8"
             >
-              Publier une tache
+              Publier une mission
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
             <Button

@@ -139,7 +139,7 @@ export default function PublicProfilePage() {
             Cet utilisateur n&apos;existe pas ou a ete supprime.
           </p>
           <Button onClick={() => router.push("/browse")} className="bg-navy hover:bg-orange">
-            Retour aux taches
+            Retour aux missions
           </Button>
         </Card>
       </div>

@@ -255,7 +255,7 @@ export default function BrowseTasksPage() {
               <div className="relative w-full">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50" />
                 <Input
-                  placeholder="Rechercher une tache..."
+                  placeholder="Rechercher une mission..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className="pl-10 bg-white/10 border-white/10 text-white placeholder:text-white/50 focus:bg-white/20"
@@ -275,7 +275,7 @@ export default function BrowseTasksPage() {
                 onClick={() => router.push("/dashboard/post")}
                 className="bg-orange hover:bg-orange-hover"
               >
-                Poster une tache
+                Poster une mission
               </Button>
             </div>
           </div>
@@ -437,7 +437,7 @@ export default function BrowseTasksPage() {
                 </Sheet>
                 
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">{filteredAndSortedTasks.length}</span> taches disponibles
+                  <span className="font-semibold text-foreground">{filteredAndSortedTasks.length}</span> missions disponibles
                 </p>
               </div>
               
@@ -494,7 +494,7 @@ export default function BrowseTasksPage() {
             ) : filteredAndSortedTasks.length === 0 ? (
               <Card className="p-12 text-center">
                 <Search className="w-12 h-12 mx-auto text-muted-foreground/25 mb-4" />
-                <h3 className="font-serif text-lg font-bold text-navy mb-2">Aucune tache trouvee</h3>
+                <h3 className="font-serif text-lg font-bold text-navy mb-2">Aucune mission trouvee</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Essayez de modifier vos filtres ou{" "}
                   <button onClick={clearFilters} className="text-orange hover:underline">
@@ -502,7 +502,7 @@ export default function BrowseTasksPage() {
                   </button>
                 </p>
                 <Button onClick={() => router.push("/dashboard/post")} className="bg-navy hover:bg-orange">
-                  Poster une tache
+                  Poster une mission
                 </Button>
               </Card>
             ) : (

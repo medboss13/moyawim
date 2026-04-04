@@ -329,7 +329,7 @@ function MakeOfferDialog({ taskId, taskTitle, suggestedBudget, onSuccess }: { ta
                 <Star className="w-3 h-3 fill-orange text-orange" />
                 <span>{userData?.rating?.toFixed(1) || "N/A"}</span>
                 <span>-</span>
-                <span>{userData?.tasksCompleted || 0} taches completees</span>
+                <span>{userData?.tasksCompleted || 0} missions completees</span>
               </div>
             </div>
           </div>
@@ -383,12 +383,12 @@ function MakeOfferDialog({ taskId, taskTitle, suggestedBudget, onSuccess }: { ta
             <Textarea
               value={message}
               onChange={(e) => setMessage(e.target.value.slice(0, 500))}
-              placeholder="Presentez-vous, expliquez votre experience et pourquoi vous etes qualifie pour cette tache..."
+              placeholder="Presentez-vous, expliquez votre experience et pourquoi vous etes qualifie pour cette mission..."
               rows={4}
               className="resize-none"
             />
             <p className="text-xs text-muted-foreground">
-              Conseil: Mentionnez votre experience pertinente et soyez specifique sur comment vous allez realiser la tache.
+              Conseil: Mentionnez votre experience pertinente et soyez specifique sur comment vous allez realiser la mission.
             </p>
           </div>
         </div>
@@ -445,12 +445,12 @@ export default function TaskDetailPage() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <Card className="p-8 text-center max-w-md">
-          <h2 className="font-serif text-xl font-bold text-navy mb-2">Tache introuvable</h2>
+          <h2 className="font-serif text-xl font-bold text-navy mb-2">Mission introuvable</h2>
           <p className="text-sm text-muted-foreground mb-4">
-            Cette tache n&apos;existe pas ou a ete supprimee.
+            Cette mission n&apos;existe pas ou a ete supprimee.
           </p>
           <Button onClick={() => router.push("/browse")} className="bg-navy hover:bg-orange">
-            Voir les taches disponibles
+            Voir les missions disponibles
           </Button>
         </Card>
       </div>
@@ -671,7 +671,7 @@ export default function TaskDetailPage() {
                         className="w-full"
                         onClick={() => router.push(`/dashboard/tasks/${taskId}/edit`)}
                       >
-                        Modifier la tache
+                        Modifier la mission
                       </Button>
                     )}
                     

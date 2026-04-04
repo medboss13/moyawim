@@ -135,7 +135,7 @@ const { offers: applications = [], loading: appsLoading } = useMyApplications()
           <CardContent className="p-5">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-xs font-medium text-muted-foreground mb-1">Taches acceptees</p>
+                <p className="text-xs font-medium text-muted-foreground mb-1">Missions acceptees</p>
                 <p className="font-serif text-2xl font-extrabold text-navy">{acceptedApps}</p>
                 <div className="flex items-center gap-1 mt-2">
                   <Badge variant="secondary" className="text-[10px] bg-orange/10 text-orange">
@@ -218,7 +218,7 @@ const { offers: applications = [], loading: appsLoading } = useMyApplications()
                   <Search className="w-4 h-4 text-white" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-navy">Chercher des taches</p>
+                  <p className="text-sm font-medium text-navy">Chercher des missions</p>
                   <p className="text-xs text-muted-foreground">{missions.length} disponibles</p>
                 </div>
                 <ChevronRight className="w-4 h-4 text-muted-foreground" />
@@ -258,7 +258,7 @@ const { offers: applications = [], loading: appsLoading } = useMyApplications()
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <div>
-              <CardTitle className="text-base font-semibold">Taches recommandees</CardTitle>
+              <CardTitle className="text-base font-semibold">Missions recommandees</CardTitle>
               <CardDescription>Basees sur vos competences</CardDescription>
             </div>
             <Link href="/dashboard/available">
@@ -275,8 +275,8 @@ const { offers: applications = [], loading: appsLoading } = useMyApplications()
                 <div className="w-12 h-12 bg-cream rounded-full flex items-center justify-center mx-auto mb-3">
                   <Search className="w-6 h-6 text-muted-foreground/50" />
                 </div>
-                <p className="text-sm font-medium text-navy mb-1">Aucune tache disponible</p>
-                <p className="text-xs text-muted-foreground">De nouvelles taches arrivent bientot</p>
+                <p className="text-sm font-medium text-navy mb-1">Aucune mission disponible</p>
+                <p className="text-xs text-muted-foreground">De nouvelles missions arrivent bientot</p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -355,12 +355,12 @@ const { offers: applications = [], loading: appsLoading } = useMyApplications()
                 </div>
                 <p className="text-sm font-medium text-navy mb-1">Aucune candidature</p>
                 <p className="text-xs text-muted-foreground mb-4">
-                  Parcourez les taches et postulez
+                  Parcourez les missions et postulez
                 </p>
                 <Link href="/dashboard/available">
                   <Button size="sm" className="bg-orange hover:bg-orange-hover">
                     <Search className="w-4 h-4 mr-1" />
-                    Trouver des taches
+                    Trouver des missions
                   </Button>
                 </Link>
               </div>

@@ -18,7 +18,7 @@ import { AuthModal } from "@/components/auth-modal"
 import { CATEGORIES } from "@/lib/types"
 
 const stats = [
-  { num: "50K+", label: "Taches completees", icon: CheckCircle2 },
+  { num: "50K+", label: "Missions completees", icon: CheckCircle2 },
   { num: "12K+", label: "Travailleurs verifies", icon: Users },
   { num: "20+", label: "Villes couvertes", icon: MapPin },
   { num: "4.8/5", label: "Note moyenne", icon: Star },
@@ -38,7 +38,7 @@ const faqItems = [
   },
   {
     q: "Le paiement est-il securise ?",
-    a: "Oui, nous utilisons un systeme de paiement en sequestre. Votre argent est retenu en securite jusqu'a ce que vous confirmez la completion de la tache."
+    a: "Oui, nous utilisons un systeme de paiement en sequestre. Votre argent est retenu en securite jusqu'a ce que vous confirmez la completion de la mission."
   },
   {
     q: "Que faire si je ne suis pas satisfait du travail ?",
@@ -46,18 +46,18 @@ const faqItems = [
   },
   {
     q: "Combien coute l'utilisation de Moyawim ?",
-    a: "L'inscription et la publication de taches sont gratuites. Nous prelevons une commission de 10% sur les transactions completees."
+    a: "L'inscription et la publication de missions sont gratuites. Nous prelevons une commission de 10% sur les transactions completees."
   },
   {
     q: "Comment devenir travailleur sur la plateforme ?",
-    a: "Inscrivez-vous en tant que travailleur, completez votre profil avec vos competences, verifiez votre identite et commencez a postuler aux taches."
+    a: "Inscrivez-vous en tant que travailleur, completez votre profil avec vos competences, verifiez votre identite et commencez a postuler aux missions."
   },
 ]
 
 const steps = [
   {
     num: 1,
-    title: "Publiez votre tache",
+    title: "Publiez votre mission",
     desc: "Decrivez ce dont vous avez besoin, fixez votre budget et choisissez votre lieu. C'est gratuit et prend moins de 2 minutes.",
     icon: Search,
     color: "#f47920",
@@ -79,7 +79,7 @@ const steps = [
   {
     num: 4,
     title: "Paiement securise",
-    desc: "Payez en toute securite une fois la tache terminee. Votre argent est protege jusqu'a validation.",
+    desc: "Payez en toute securite une fois la mission terminee. Votre argent est protege jusqu'a validation.",
     icon: CreditCard,
     color: "#2563eb",
   },
@@ -223,7 +223,7 @@ export function LandingPage() {
 
         <div className="hidden lg:flex items-center gap-8">
           <Link href="/browse" className="text-sm font-medium text-foreground hover:text-orange transition-colors">
-            Parcourir les taches
+            Parcourir les missions
           </Link>
           <Link href="/categories" className="text-sm font-medium text-foreground hover:text-orange transition-colors">
             Categories
@@ -241,7 +241,7 @@ export function LandingPage() {
             Connexion
           </Button>
           <Button onClick={() => setAuthOpen(true)} className="bg-orange hover:bg-orange-hover hidden sm:flex">
-            Publier une tache
+            Publier une mission
           </Button>
           
           {/* Mobile Menu */}
@@ -273,7 +273,7 @@ export function LandingPage() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <Search className="w-5 h-5 text-muted-foreground" />
-                  <span className="font-medium">Parcourir les taches</span>
+                  <span className="font-medium">Parcourir les missions</span>
                 </Link>
                 <Link 
                   href="/categories" 
@@ -320,7 +320,7 @@ export function LandingPage() {
                   className="w-full bg-orange hover:bg-orange-hover"
                   onClick={() => { setMobileMenuOpen(false); setAuthOpen(true) }}
                 >
-                  Publier une tache
+                  Publier une mission
                 </Button>
               </div>
               <div className="p-5 border-t">
@@ -425,7 +425,7 @@ export function LandingPage() {
                     <CheckCircle2 className="w-5 h-5 text-success" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-navy">Tache publiee!</p>
+                    <p className="text-sm font-semibold text-navy">Mission publiee!</p>
                     <p className="text-xs text-muted-foreground">Il y a 2 min</p>
                   </div>
                 </div>
@@ -456,7 +456,7 @@ export function LandingPage() {
               <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 bg-navy text-white rounded-full px-6 py-3 shadow-xl flex items-center gap-6">
                 <div className="text-center">
                   <p className="font-serif text-xl font-bold text-orange">50K+</p>
-                  <p className="text-[10px] text-white/60">Taches</p>
+                  <p className="text-[10px] text-white/60">Missions</p>
                 </div>
                 <div className="w-px h-8 bg-white/10" />
                 <div className="text-center">
@@ -549,7 +549,7 @@ export function LandingPage() {
               Comment ca marche ?
             </h2>
             <p className="text-base text-muted-foreground max-w-[600px] mx-auto">
-              4 etapes simples pour trouver le professionnel qu&apos;il vous faut et accomplir votre tache.
+              4 etapes simples pour trouver le professionnel qu&apos;il vous faut et accomplir votre mission.
             </p>
           </div>
 
@@ -590,7 +590,7 @@ export function LandingPage() {
 
           <div className="mt-12 text-center">
             <Button size="lg" onClick={() => setAuthOpen(true)} className="bg-navy hover:bg-orange">
-              Publier ma premiere tache <ArrowRight className="w-4 h-4 ml-2" />
+              Publier ma premiere mission <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
         </div>
@@ -603,7 +603,7 @@ export function LandingPage() {
             <div>
               <Badge className="bg-orange/10 text-orange hover:bg-orange/10 mb-4">Tendances</Badge>
               <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-navy tracking-tight mb-2">
-                Taches populaires
+                Missions populaires
               </h2>
               <p className="text-base text-muted-foreground">
                 Les services les plus demandes par notre communaute.
@@ -611,7 +611,7 @@ export function LandingPage() {
             </div>
             <Link href="/browse">
               <Button variant="outline">
-                Voir toutes les taches <ArrowRight className="w-4 h-4 ml-1" />
+                Voir toutes les missions <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
           </div>
@@ -718,7 +718,7 @@ export function LandingPage() {
                   </div>
                   
                   <p className="text-xs text-muted-foreground mt-2">
-                    {worker.tasks} taches completees
+                    {worker.tasks} missions completees
                   </p>
                 </div>
               </div>
@@ -736,7 +736,7 @@ export function LandingPage() {
               Ce que disent nos utilisateurs
             </h2>
             <p className="text-base text-white/60 max-w-[600px] mx-auto">
-              Des milliers de marocains font confiance a Moyawim pour leurs taches quotidiennes.
+              Des milliers de marocains font confiance a Moyawim pour leurs missions quotidiennes.
             </p>
           </div>
 
@@ -878,7 +878,7 @@ export function LandingPage() {
             Pret a commencer ?
           </h2>
           <p className="text-lg text-white/70 mb-8 max-w-[600px] mx-auto">
-            Rejoignez des milliers de marocains qui utilisent Moyawim pour accomplir leurs taches ou gagner de l&apos;argent.
+            Rejoignez des milliers de marocains qui utilisent Moyawim pour accomplir leurs missions ou gagner de l&apos;argent.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -887,7 +887,7 @@ export function LandingPage() {
               onClick={() => setAuthOpen(true)}
               className="bg-orange hover:bg-orange-hover text-base px-8"
             >
-              Publier une tache gratuitement
+              Publier une mission gratuitement
             </Button>
             <Button 
               size="lg" 
@@ -955,7 +955,7 @@ export function LandingPage() {
                 Comment ca marche
               </a>
               <Link href="/browse" className="block text-sm text-white/40 hover:text-orange transition-colors mb-2.5">
-                Parcourir les taches
+                Parcourir les missions
               </Link>
               <Link href="/categories" className="block text-sm text-white/40 hover:text-orange transition-colors mb-2.5">
                 Categories
