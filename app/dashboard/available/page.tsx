@@ -18,7 +18,6 @@ const CAT_ICONS: Record<string, string> = {
 }
 
 export default function AvailableMissionsPage() {
-  const { missions, loading } = useAllMissions()
   const { tasks: missions = [], loading } = useAllMissions()
   const [search, setSearch] = useState("")
   const [applyingId, setApplyingId] = useState<string | null>(null)

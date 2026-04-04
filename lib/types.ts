@@ -1,6 +1,7 @@
 import type { Timestamp } from "firebase/firestore"
 
 export type UserRole = "employer" | "worker"
+export type UIMode = "simple" | "standard"
 
 export type TaskStatus = "open" | "assigned" | "in_progress" | "completed" | "cancelled"
 export type OfferStatus = "pending" | "accepted" | "rejected" | "withdrawn"
@@ -25,6 +26,7 @@ export interface UserData {
   responseRate: number
   completionRate: number
   badges: string[]
+  uiMode?: UIMode
 }
 
 export interface WorkerData extends UserData {

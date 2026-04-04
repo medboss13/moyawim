@@ -13,10 +13,11 @@ import {
   doc,
   setDoc,
   getDoc,
+  updateDoc,
   serverTimestamp,
   type User,
 } from "./firebase"
-import type { UserData, UserRole } from "./types"
+import type { UserData, UserRole, UIMode } from "./types"
 
 interface AuthContextType {
   user: User | null
@@ -28,6 +29,8 @@ interface AuthContextType {
   completeGoogleSignUp: (role: UserRole) => Promise<void>
   signOut: () => Promise<void>
   refreshUserData: () => Promise<void>
+  setUIMode: (mode: UIMode) => Promise<void>
+  getUIMode: () => UIMode | null
 }
 
 const AuthContext = createContext<AuthContextType | null>(null)
@@ -170,6 +173,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  const setUIMode = async (mode: UIMode) => {
+    if (!user) return
+    // Save to localStorage for quick access
+    localStorage.setItem(`moyawim_uiMode_${user.uid}`, mode)
+    // Save to Firestore
+    await updateDoc(doc(db, "users", user.uid), { uiMode: mode })
+    // Update local state
+    setUserData(prev => prev ? { ...prev, uiMode: mode } : null)
+  }
+
+  const getUIMode = (): UIMode | null => {
+    if (!user) return null
+    // Check localStorage first for quick access
+    const cached = localStorage.getItem(`moyawim_uiMode_${user.uid}`)
+    if (cached === "simple" || cached === "standard") return cached
+    // Fall back to userData
+    return userData?.uiMode || null
+  }
+
   return (
     <AuthContext.Provider
       value={{
@@ -182,6 +204,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         completeGoogleSignUp,
         signOut,
         refreshUserData,
+        setUIMode,
+        getUIMode,
       }}
     >
       {children}

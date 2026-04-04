@@ -30,7 +30,7 @@ const W_PHOTOS = [
 
 // Quick actions for employers
 const quickActions = [
-  { label: "Publier une tache", href: "/dashboard/post", icon: Plus, color: "bg-orange" },
+  { label: "Publier une mission", href: "/dashboard/post", icon: Plus, color: "bg-orange" },
   { label: "Voir les offres", href: "/dashboard/missions", icon: MessageSquare, color: "bg-navy" },
   { label: "Trouver un pro", href: "/dashboard/workers", icon: Users, color: "bg-success" },
 ]
@@ -63,7 +63,7 @@ export function EmployerDashboard() {
             {firstName}
           </h1>
           <p className="text-muted-foreground">
-            Voici un apercu de votre activite et de vos taches en cours.
+            Voici un apercu de votre activite et de vos missions en cours.
           </p>
         </div>
         
@@ -89,7 +89,7 @@ export function EmployerDashboard() {
           <CardContent className="p-5">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-xs font-medium text-muted-foreground mb-1">Taches actives</p>
+                <p className="text-xs font-medium text-muted-foreground mb-1">Missions actives</p>
                 <p className="font-serif text-3xl font-extrabold text-navy">{activeMissions}</p>
                 <div className="flex items-center gap-1 mt-2">
                   <Badge variant="secondary" className="text-[10px] bg-orange/10 text-orange">
@@ -172,13 +172,13 @@ export function EmployerDashboard() {
         <Card className="lg:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-base font-semibold">Apercu de l&apos;activite</CardTitle>
-            <CardDescription>Progression de vos taches ce mois-ci</CardDescription>
+            <CardDescription>Progression de vos missions ce mois-ci</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div>
                 <div className="flex items-center justify-between text-sm mb-2">
-                  <span className="text-muted-foreground">Taches publiees</span>
+                  <span className="text-muted-foreground">Missions publiees</span>
                   <span className="font-medium">{missions.length}</span>
                 </div>
                 <Progress value={Math.min(missions.length * 10, 100)} className="h-2" />
@@ -197,7 +197,7 @@ export function EmployerDashboard() {
               </div>
               <div>
                 <div className="flex items-center justify-between text-sm mb-2">
-                  <span className="text-muted-foreground">Offres par tache (moy)</span>
+                  <span className="text-muted-foreground">Offres par mission (moy)</span>
                   <span className="font-medium">
                     {activeMissions > 0 ? Math.round(totalApplicants / activeMissions) : 0}
                   </span>
@@ -222,7 +222,7 @@ export function EmployerDashboard() {
                   <Plus className="w-4 h-4 text-white" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-navy">Nouvelle tache</p>
+                  <p className="text-sm font-medium text-navy">Nouvelle mission</p>
                   <p className="text-xs text-muted-foreground">Publiez en 2 min</p>
                 </div>
                 <ChevronRight className="w-4 h-4 text-muted-foreground" />
@@ -262,8 +262,8 @@ export function EmployerDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <div>
-              <CardTitle className="text-base font-semibold">Mes taches recentes</CardTitle>
-              <CardDescription>{missions.length} taches au total</CardDescription>
+              <CardTitle className="text-base font-semibold">Mes missions recentes</CardTitle>
+              <CardDescription>{missions.length} missions au total</CardDescription>
             </div>
             <Link href="/dashboard/missions">
               <Button variant="outline" size="sm">
@@ -279,12 +279,12 @@ export function EmployerDashboard() {
                 <div className="w-12 h-12 bg-cream rounded-full flex items-center justify-center mx-auto mb-3">
                   <ListTodo className="w-6 h-6 text-muted-foreground/50" />
                 </div>
-                <p className="text-sm font-medium text-navy mb-1">Aucune tache publiee</p>
-                <p className="text-xs text-muted-foreground mb-4">Publiez votre premiere tache pour recevoir des offres</p>
+                <p className="text-sm font-medium text-navy mb-1">Aucune mission publiee</p>
+                <p className="text-xs text-muted-foreground mb-4">Publiez votre premiere mission pour recevoir des offres</p>
                 <Link href="/dashboard/post">
                   <Button size="sm" className="bg-orange hover:bg-orange-hover">
                     <Plus className="w-4 h-4 mr-1" />
-                    Publier une tache
+                    Publier une mission
                   </Button>
                 </Link>
               </div>

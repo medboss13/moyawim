@@ -48,7 +48,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="font-serif text-xl font-bold text-navy mb-4">1. Presentation du Service</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Moyawim.ma est une plateforme en ligne de mise en relation entre des particuliers ou entreprises (les &quot;Employeurs&quot;) souhaitant faire realiser des taches ou services, et des prestataires independants (les &quot;Travailleurs&quot;) proposant leurs competences.
+                Moyawim.ma est une plateforme en ligne de mise en relation entre des particuliers ou entreprises (les &quot;Employeurs&quot;) souhaitant faire realiser des missions ou services, et des prestataires independants (les &quot;Travailleurs&quot;) proposant leurs competences.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 La plateforme est exploitee dans le cadre d&apos;un projet academique par des etudiants de l&apos;ENCG Meknes.
@@ -77,7 +77,7 @@ export default function TermsPage() {
                 Moyawim.ma agit uniquement en qualite d&apos;intermediaire technique. Nous ne sommes pas partie aux contrats conclus entre Employeurs et Travailleurs.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Nous ne garantissons pas la qualite des services rendus, la disponibilite des Travailleurs, ni l&apos;execution des taches publiees.
+                Nous ne garantissons pas la qualite des services rendus, la disponibilite des Travailleurs, ni l&apos;execution des missions publiees.
               </p>
             </section>
 
@@ -86,8 +86,8 @@ export default function TermsPage() {
               
               <h3 className="font-semibold text-navy mb-2">Pour les Employeurs :</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                <li>Decrire les taches de maniere precise et honnete</li>
-                <li>Payer le montant convenu une fois la tache completee</li>
+                <li>Decrire les missions de maniere precise et honnete</li>
+                <li>Payer le montant convenu une fois la mission completee</li>
                 <li>Traiter les Travailleurs avec respect</li>
                 <li>Ne pas demander de services illegaux</li>
               </ul>
@@ -95,7 +95,7 @@ export default function TermsPage() {
               <h3 className="font-semibold text-navy mb-2">Pour les Travailleurs :</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
                 <li>Fournir des informations exactes sur leurs competences</li>
-                <li>Realiser les taches acceptees avec professionnalisme</li>
+                <li>Realiser les missions acceptees avec professionnalisme</li>
                 <li>Respecter les delais convenus</li>
                 <li>Etre en conformite avec les reglementations en vigueur</li>
               </ul>
@@ -107,7 +107,7 @@ export default function TermsPage() {
                 Les paiements sont effectues via notre systeme securise. Une commission de 10% est prelevee sur chaque transaction completee.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                L&apos;argent est place en sequestre jusqu&apos;a la validation de la tache par l&apos;Employeur.
+                L&apos;argent est place en sequestre jusqu&apos;a la validation de la mission par l&apos;Employeur.
               </p>
             </section>
 
@@ -117,7 +117,7 @@ export default function TermsPage() {
                 En cas de litige entre un Employeur et un Travailleur, Moyawim.ma peut intervenir en tant que mediateur. Notre decision sera finale et contraignante.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Les litiges doivent etre signales dans les 48 heures suivant la completion de la tache.
+                Les litiges doivent etre signales dans les 48 heures suivant la completion de la mission.
               </p>
             </section>
 

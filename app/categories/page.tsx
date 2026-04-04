@@ -154,7 +154,7 @@ export default function CategoriesPage() {
               <CardContent className="p-5 text-center">
                 <TrendingUp className="w-6 h-6 text-orange mx-auto mb-2" />
                 <p className="font-serif text-2xl font-bold text-navy">50K+</p>
-                <p className="text-sm text-muted-foreground">Taches completees</p>
+                <p className="text-sm text-muted-foreground">Missions completees</p>
               </CardContent>
             </Card>
             <Card className="bg-cream border-cream-dark">

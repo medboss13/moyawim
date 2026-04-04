@@ -41,8 +41,8 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 const employerNav = [
   { section: "Principal" },
   { label: "Accueil", href: "/dashboard", icon: Home },
-  { label: "Mes taches", href: "/dashboard/missions", icon: ListTodo },
-  { label: "Publier une tache", href: "/dashboard/post", icon: PlusCircle },
+  { label: "Mes missions", href: "/dashboard/missions", icon: ListTodo },
+  { label: "Publier une mission", href: "/dashboard/post", icon: PlusCircle },
   { section: "Communication" },
   { label: "Travailleurs", href: "/dashboard/workers", icon: Users },
   { label: "Messages", href: "/dashboard/messages", icon: MessageSquare, badge: 3 },
@@ -54,7 +54,7 @@ const employerNav = [
 const workerNav = [
   { section: "Principal" },
   { label: "Accueil", href: "/dashboard", icon: Home },
-  { label: "Trouver des taches", href: "/dashboard/available", icon: Search },
+  { label: "Trouver des missions", href: "/dashboard/available", icon: Search },
   { label: "Mes candidatures", href: "/dashboard/applications", icon: Inbox },
   { section: "Finances" },
   { label: "Mes revenus", href: "/dashboard/revenue", icon: Wallet },
@@ -70,7 +70,7 @@ const mockNotifications = [
     id: "1",
     type: "offer",
     title: "Nouvelle offre recue",
-    body: "Khalid M. a fait une offre de 250 DH pour votre tache 'Reparation plomberie'",
+    body: "Khalid M. a fait une offre de 250 DH pour votre mission 'Reparation plomberie'",
     read: false,
     createdAt: new Date(Date.now() - 1000 * 60 * 5), // 5 min ago
   },
@@ -93,8 +93,8 @@ const mockNotifications = [
   {
     id: "4",
     type: "task_update",
-    title: "Tache terminee",
-    body: "La tache 'Menage appartement' a ete marquee comme terminee",
+    title: "Mission terminee",
+    body: "La mission 'Menage appartement' a ete marquee comme terminee",
     read: true,
     createdAt: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
   },
